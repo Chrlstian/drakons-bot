@@ -1,16 +1,5 @@
-// document.addEventListener('DOMContentLoaded', function () {
-//   document.getElementById('start').addEventListener('click', () => {
-//     chrome.runtime.sendMessage({ action: 'start' });
-//   });
-
-//   document.getElementById('stop').addEventListener('click', () => {
-//     chrome.runtime.sendMessage({ action: 'stop' });
-//   });
-// });
 
 document.addEventListener('DOMContentLoaded', function () {
-  // Function to execute the whole process
-  // function executeScript() {
     document.getElementById('stop').addEventListener('click', () => {
       chrome.runtime.sendMessage({ action: 'stop' });
     });
@@ -99,13 +88,6 @@ document.addEventListener('DOMContentLoaded', function () {
       }
       clickImage();
     }
-  // }
-
-  // Call the function initially
-  // executeScript();
-
-  // Set interval to rerun the script every hour (3600000 milliseconds)
-  // setInterval(executeScript, 120000);
 });
 
 

@@ -86,8 +86,8 @@ function executeScript() {
     }
   }
   
-  // Create an alarm that triggers every 5 minutes
-  chrome.alarms.create('drakonsAlarm', { periodInMinutes: 60 });
+// Create an alarm that triggers every 5 minutes
+chrome.alarms.create('drakonsAlarm', { periodInMinutes: 60 });
 
 // Create an alarm when the start button is clicked
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
@@ -100,14 +100,14 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         }
       });
     }
-  });
+});
   
-  // Listen for the alarm event
-  chrome.alarms.onAlarm.addListener((alarm) => {
-    if (alarm.name === 'drakonsAlarm') {
+// Listen for the alarm event
+chrome.alarms.onAlarm.addListener((alarm) => {
+  if (alarm.name === 'drakonsAlarm') {
       executeScript();
-    }
-  });
+  }
+});
   
 
 
