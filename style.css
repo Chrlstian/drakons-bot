@@ -20,7 +20,7 @@ h2{
 .btn-container{
     display: flex;
     align-items: center;
-    margin: 0 auto;
+    /* margin: 0 auto; */
 }
 
 button {
