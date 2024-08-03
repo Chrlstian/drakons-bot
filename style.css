@@ -5,9 +5,13 @@
 }
 
 .drakon-container{
-    padding: 5px;
+    padding: 15px;
     height: 8rem;
-    width: 10rem;
+    width: 16rem;
+}
+
+.drakon-container #minutesToSend{
+    width: 100%;
 }
 
 h2{
@@ -17,17 +21,11 @@ h2{
     margin-top: 10px;
 }
 
-.btn-container{
-    display: flex;
-    align-items: center;
-    /* margin: 0 auto; */
-}
-
 button {
-    padding: 20px;
     font-size: 14px;
-    margin: 5px;
+    margin-top: 5px;
     cursor: pointer;
+    width: 100%;
 }
 
 #start{
@@ -51,6 +49,7 @@ button {
     border: 0;
     padding: 8px 16px;
     color: #fff;
+    margin-bottom: 10px;
 }
 
 #stop:hover{
