@@ -3,7 +3,11 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('stop').addEventListener('click', () => {
       chrome.runtime.sendMessage({ action: 'stop' });
     });
+  
     document.getElementById('start').addEventListener('click', () => {
+      const minutesToSend = document.getElementById('minutesToSend').value;
+      chrome.runtime.sendMessage({ action: 'start', minutes: parseFloat(minutesToSend) });
+
       chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
         chrome.tabs.update(tabs[0].id, { url: 'https://www.drakons.io/battle' }, (tab) => {
           chrome.tabs.onUpdated.addListener(function listener(tabId, changeInfo) {
@@ -18,6 +22,21 @@ document.addEventListener('DOMContentLoaded', function () {
         });
       });
     });
+    // document.getElementById('start').addEventListener('click', () => {
+    //   chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+    //     chrome.tabs.update(tabs[0].id, { url: 'https://www.drakons.io/battle' }, (tab) => {
+    //       chrome.tabs.onUpdated.addListener(function listener(tabId, changeInfo) {
+    //         if (tabId === tab.id && changeInfo.status === 'complete') {
+    //           chrome.scripting.executeScript({
+    //             target: { tabId: tabId },
+    //             function: waitForImageAndClick
+    //           });
+    //           chrome.tabs.onUpdated.removeListener(listener);
+    //         }
+    //       });
+    //     });
+    //   });
+    // });
 
     function waitForImageAndClick() {
       function clickImage() {

@@ -12,6 +12,9 @@
 
 .drakon-container #minutesToSend{
     width: 100%;
+    outline: 0;
+    padding-left: 5px;
+    height: 25px;
 }
 
 h2{
