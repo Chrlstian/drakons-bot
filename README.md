@@ -1,4 +1,4 @@
-# Auto-sender-Chrome-Extension-
+# Auto-Send-Drakons-Chrome-Extension
 This is a modern Chrome extension app that will automatically send your nft drakons in the battlefield with adjustable time. Features include: Input minutes and send button.
 
 # Reminder
